@@ -19,8 +19,6 @@ int main()
     Screens.push_back(&s0);
     Credits s1;
     Screens.push_back(&s1);
-    Djks s2;
-    Screens.push_back(&s2);
 
     //Main loop
     while (screen >= 0)
