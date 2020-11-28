@@ -7,6 +7,7 @@
 //Including each screen of application
 #include "menu.hpp"
 #include "credits.hpp"
+#include "Dijkstra.hpp"
 
 
 
