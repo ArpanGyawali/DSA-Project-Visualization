@@ -8,7 +8,7 @@
 #include "menu.hpp"
 #include "credits.hpp"
 #include "Dijkstra.hpp"
-
+#include "Quick.hpp"
 
 
 #endif // SCREENS_HPP_INCLUDED

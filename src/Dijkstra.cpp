@@ -1,6 +1,6 @@
 #include "../include/Dijkstra.hpp"
 
-bool sptSet[num][num];
+bool sptSet[NUM_CELL][NUM_CELL];
 vector<pair<int,int> > pathD;
 
 Djks::Djks(void) //: threadD(std::bind(&Djks::dijkstra,this,source_x,source_y,dest_x,dest_y,grid))
@@ -9,32 +9,35 @@ Djks::Djks(void) //: threadD(std::bind(&Djks::dijkstra,this,source_x,source_y,de
     source_y=2;
     dest_x=50;
     dest_y=56;   //Origin(2,3)->Goal(50,56)
-    for(int i=0;i<num;i++)
-        for(int j=0;j<num;j++){
+    for(int i=0;i<NUM_CELL;i++)
+        for(int j=0;j<NUM_CELL;j++){
             if(i==0||i==59||j==0||j==59)        //walls
                 grid[i][j]=0;
             else
                 grid[i][j]=1;
         }
-    for(int i=0;i<num;i++)
-        for(int j=0;j<num;j++){
+    for(int i=0;i<NUM_CELL;i++)
+        for(int j=0;j<NUM_CELL;j++){
             sptSet[i][j]=false;     //dijkstra all unexplored
             filled[i][j]=0;     //all uncolored
             dist[i][j]=FLT_MAX;
         }
     //threadD = new Thread(&Djks::dijkstra,this,source_x,source_y,dest_x,dest_y,grid);
     dist[source_x][source_y]=0.0;
-	// bool sptSet[num][num] = { false };
-    previous[num][num] = {make_pair(0,0)};     
+    // bool sptSet[NUM_CELL][NUM_CELL] = { false };
+    previous[NUM_CELL][NUM_CELL] = {make_pair(0,0)};     
     min_x=0;
     min_y=0;
-    font.loadFromFile("resource/arial.ttf");
+    if (!font.loadFromFile("resource/Text.ttf"))
+    {
+        std::cerr << "Error loading Text.ttf" << std::endl;
+    }
     text1.setFont(font);
-	text1.setString("FIND PATH");
-	text1.setCharacterSize(15);
+    text1.setString("FIND PATH");
+    text1.setCharacterSize(15);
 
     // Shapes
-    buttonStartD.setSize(Vector2f(75,25));       //button dijkstra
+    buttonStartD.setSize(Vector2f(200,30));       //button dijkstra
     buttonStartD.setFillColor(Color::Green);
    
     rectangle.setSize(Vector2f(10,10));      //default box :White
@@ -57,10 +60,10 @@ Djks::Djks(void) //: threadD(std::bind(&Djks::dijkstra,this,source_x,source_y,de
     yrectangle.setFillColor(Color::Yellow);
 }
 
-void Djks::findmin(float dist[num][num],int& min_x,int& min_y){
+void Djks::findmin(float dist[NUM_CELL][NUM_CELL],int& min_x,int& min_y){
     float mini=FLT_MAX;
-    for(int i=0;i<num;i++)
-        for(int j=0;j<num;j++)
+    for(int i=0;i<NUM_CELL;i++)
+        for(int j=0;j<NUM_CELL;j++)
             if(sptSet[i][j]==false && dist[i][j]<mini){
                 mini=dist[i][j];
                 min_x=i;
@@ -68,7 +71,7 @@ void Djks::findmin(float dist[num][num],int& min_x,int& min_y){
             }
 }
 
-void Djks::findpath(pair<int,int> previous[num][num],float dist[num][num],int dest_x,int dest_y,int source_x,int source_y){
+void Djks::findpath(pair<int,int> previous[NUM_CELL][NUM_CELL],float dist[NUM_CELL][NUM_CELL],int dest_x,int dest_y,int source_x,int source_y){
     int shortest_distance = dist[dest_x][dest_y];
     while(previous[dest_x][dest_y].first!=source_x || previous[dest_x][dest_y].second!=source_y){        // both simultaneously equal to source coordinates
         sf::sleep(milliseconds(10));        //delay shortest pathD
@@ -81,10 +84,10 @@ void Djks::findpath(pair<int,int> previous[num][num],float dist[num][num],int de
     cout<<"\nLength of Dijkstra path is: "<<shortest_distance<<endl;
 }
 
-void Djks::dijkstra(int source_x,int source_y,int dest_x,int dest_y,int grid[num][num]){
+void Djks::dijkstra(int source_x,int source_y,int dest_x,int dest_y,int grid[NUM_CELL][NUM_CELL]){
     int found=0;
-    for(int i=0;i<num && found==0;i++) {
-        for(int j=0;j<num && found==0;j++){
+    for(int i=0;i<NUM_CELL && found==0;i++) {
+        for(int j=0;j<NUM_CELL && found==0;j++){
             findmin(dist,min_x,min_y);                  //pass by reference
             sptSet[min_x][min_y]=true;
             if(sptSet[dest_x][dest_y]==true){
@@ -110,38 +113,38 @@ void Djks::dijkstra(int source_x,int source_y,int dest_x,int dest_y,int grid[num
 }
 
 int Djks::Run(RenderWindow &App)
-{	
+{   
     Thread threadD(std::bind(&Djks::dijkstra,this,source_x,source_y,dest_x,dest_y,grid));
-	Event event;
-	bool Running = true;
+    Event event;
+    bool Running = true;
 
-	while (Running)
-	{
-		//Verifying events
-		while (App.pollEvent(event))
-		{
-			// Window closed
-			if (event.type == sf::Event::Closed)
-			{
-				return (-1);
-			}
-			//Key pressed
-			if (event.type == sf::Event::KeyPressed)
-			{
-				switch (event.key.code)
-				{
-				case sf::Keyboard::Escape:
-					return (0);
-					break;
-				case sf::Keyboard::Q:
-					return (-1);
-					break;
-				default:
-					break;
-				}
-			}
-			if(event.type==Event::MouseButtonPressed && event.mouseButton.button==Mouse::Left)
-			{
+    while (Running)
+    {
+        //Verifying events
+        while (App.pollEvent(event))
+        {
+            // Window closed
+            if (event.type == sf::Event::Closed)
+            {
+                return (-1);
+            }
+            //Key pressed
+            if (event.type == sf::Event::KeyPressed)
+            {
+                switch (event.key.code)
+                {
+                case sf::Keyboard::Escape:
+                    return (0);
+                    break;
+                case sf::Keyboard::Q:
+                    return (-1);
+                    break;
+                default:
+                    break;
+                }
+            }
+            if(event.type==Event::MouseButtonPressed && event.mouseButton.button==Mouse::Left)
+            {
                 int X=event.mouseButton.x;
                 int Y=event.mouseButton.y;
                 int row=Y/10;       //Reversed notion of row & column
@@ -159,12 +162,12 @@ int Djks::Run(RenderWindow &App)
                     //dijkstra(source_x, source_y, dest_x, dest_y, grid);                                                             //to improve
                 }
             }
-		}
+        }
 
-		App.clear();
+        App.clear();
         buttonStartD.setPosition(600,0);
         App.draw(buttonStartD);      //Dijkstra launch
-        text1.setPosition(600,0);       //Dijkstra text
+        text1.setPosition(602,5);       //Dijkstra text
         App.draw(text1);
 
         if(!pathD.empty()){
@@ -204,6 +207,6 @@ int Djks::Run(RenderWindow &App)
             }
         }
         App.display();
-	}
-	return -1;
+    }
+    return -1;
 }
