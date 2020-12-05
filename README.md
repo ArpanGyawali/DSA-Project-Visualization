@@ -17,7 +17,7 @@ This repository is for my Data Structure and Algorithm project. Our goal is to m
 * **Quick.hpp** - *Quick Sort* and *Bubble Sort* algorithm visualization
 * **credits.hpp** - show the credits and information of contributers or project member
 
-##src
+## src
 * **main.cpp** - Manages all screens--file which runs first
 * **menu.cpp** - *home* screen
 * **Dijkstra.cpp** - *Dijkstra Algorithm* to find shortest distance between two coordinates
