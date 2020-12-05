@@ -21,31 +21,40 @@ int menu::Run(sf::RenderWindow &App)
 	bool Running = true;
 	int alpha = 0;
 	Font font;
+	Font font1;
 	Text Menu[MAX_Number_OF_TEXT];
-	// int menu = 0;
+	Text head;
 
-	if (!font.loadFromFile("resource/HeadText.ttf"))
+	// int menu = 0;
+	if (!font1.loadFromFile("resource/Mono.ttf"))
 	{
 		std::cerr << "Error loading HeadText.ttf" << std::endl;
-		return (-1);
+	}
+	head.setFont(font1);
+	head.setFillColor(Color::Red);
+	head.setString("D.S.A");
+	head.setCharacterSize(80);
+
+	if (!font.loadFromFile("resource/Texturina.ttf"))
+	{
+		std::cerr << "Error loading HeadText.ttf" << std::endl;
 	}
 
-	if (!Texture.loadFromFile("resource/star.jpg"))
+	if (!Texture.loadFromFile("resource/aa.jpg"))
 	{
-		std::cerr << "Error loading star.jpg" << std::endl;
-		return (-1);
+		std::cerr << "Error loading aa.jpg" << std::endl;
 	}
 	Sprite.setTexture(Texture);
 	Sprite.setColor(sf::Color(255, 255, 255, alpha));
 
 	for (int i = 0; i < MAX_Number_OF_TEXT; i++) {
 		Menu[i].setFont(font);
-		Menu[i].setPosition(Vector2f((800 / 2)-100+(i*18) , 600 / (MAX_Number_OF_TEXT + 1)*(i+1)));
+		Menu[i].setPosition(Vector2f(800-220 ,400+(i*50)));
 		Menu[i].setCharacterSize(30);
 	}
 
 	Menu[0].setFillColor(Color::Red);
-	Menu[0].setString("BUBBLE SORT");
+	Menu[0].setString("SORTING VIZ");
 
 	Menu[1].setFillColor(Color::White);
 	Menu[1].setString("DIJKSTRA");
@@ -126,11 +135,13 @@ int menu::Run(sf::RenderWindow &App)
 
 		App.clear();
 		App.draw(Sprite);
+		head.setPosition(50,40);
 
 		if (alpha == alpha_max){
 			for (int i = 0; i < MAX_Number_OF_TEXT; i++) {
 				App.draw(Menu[i]);
 			}
+			App.draw(head);
 		}
 		App.display();
 	}
