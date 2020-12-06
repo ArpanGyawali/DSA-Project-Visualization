@@ -6,6 +6,21 @@ menu::menu(void)
 	alpha_div = 3;
 	playing = false;
 	selectedItemIndex = 0;
+	if (!m1.openFromFile("resource/AmongUs.wav"))
+	{
+		std::cerr << "Error loading start.wav" << std::endl;
+	}
+	m1.setLoop(true);
+	m1.setVolume(50);
+	// if (!sb1.loadFromFile("resource/Mono.ttf"))
+	// {
+	// 	std::cerr << "Error loading HeadText.ttf" << std::endl;
+	// }
+	// s1.setBuffer(sb1);
+	// if (!sb2.loadFromFile("resource/.ttf"))
+	// {
+	// 	std::cerr << "Error loading HeadText.ttf" << std::endl;
+	// }
 }
 
 int menu::getPressedItem()
@@ -53,18 +68,29 @@ int menu::Run(sf::RenderWindow &App)
 		Menu[i].setCharacterSize(30);
 	}
 
-	Menu[0].setFillColor(Color::Red);
+	if (getPressedItem() == 0)
+		Menu[0].setFillColor(Color::Red);
+	else
+		Menu[0].setFillColor(Color::White);
 	Menu[0].setString("SORTING VIZ");
 
-	Menu[1].setFillColor(Color::White);
+	if (getPressedItem() == 1)
+		Menu[1].setFillColor(Color::Red);
+	else
+		Menu[1].setFillColor(Color::White);
 	Menu[1].setString("DIJKSTRA");
 
 
-	Menu[2].setFillColor(Color::White);
+	if (getPressedItem() == 2)
+		Menu[2].setFillColor(Color::Red);
+	else
+		Menu[2].setFillColor(Color::White);
 	Menu[2].setString("CREDITS");
 
 	Menu[3].setFillColor(Color::White);
 	Menu[3].setString("EXIT");
+
+	m1.play();
 
 	if (playing)
 	{
@@ -74,9 +100,11 @@ int menu::Run(sf::RenderWindow &App)
 	while (Running)
 	{
 		//Verifying events
+		//m1.play();
 		while (App.pollEvent(event))
 		{
 			// Window closed
+			
 			if (event.type == Event::Closed)
 			{
 				return (-1);
@@ -101,6 +129,7 @@ int menu::Run(sf::RenderWindow &App)
 					}
 					break;
 				case Keyboard::Return:
+					m1.pause();
 					switch (getPressedItem())
                     {
                     case 0:
