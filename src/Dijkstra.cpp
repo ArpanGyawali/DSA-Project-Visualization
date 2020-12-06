@@ -3,6 +3,7 @@
 bool sptSet[NUM_ROW][NUM_COLS];
 vector<pair<int,int> > pathD;
 
+
 Djks::Djks(void) //: threadD(std::bind(&Djks::dijkstra,this,source_x,source_y,dest_x,dest_y,grid))
 {   
     srand(time(0));

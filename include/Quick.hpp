@@ -8,9 +8,10 @@
 #include <future>
 #include <list>
 #include <ctime>
+#include <math.h>
 #include "cScreen.hpp"
 
-#define ARR_MAX_VALUE 100
+#define ARR_MAX_VALUE 60
 #define CHUNK_ARRAY_SIZE 10
 
 using namespace std;
@@ -32,11 +33,16 @@ private:
 	RectangleShape rectPointer;
 	Font font;
 	Font font1;
+	Font font2;
 	Text text1;
 	Text text2;
 	Text text3;
 	Text text;
 	Text text4;
+	Text text5;
+	Text text6;
+	Text text7;
+	Text text8;
 
 public:
 	QuickSort(void);

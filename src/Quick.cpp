@@ -20,11 +20,11 @@ QuickSort::QuickSort(void) {
     buttonSort.setOutlineColor(Color::Red);
 
 	rectangle.setFillColor(sf::Color::White);		//rectangular shape for array arr
-	rectangle.setOutlineThickness(1.f);
+	rectangle.setOutlineThickness(1);
 	rectangle.setOutlineColor(sf::Color(0, 0, 0));
 
 	rectangle1.setFillColor(sf::Color::White);		//rectangular shape for array arr1
-	rectangle1.setOutlineThickness(1.f);
+	rectangle1.setOutlineThickness(1);
 	rectangle1.setOutlineColor(sf::Color(0, 0, 0));
 
 	rectPointer.setFillColor(sf::Color::Red);		//rectangular shape for pointer
@@ -34,6 +34,10 @@ QuickSort::QuickSort(void) {
 		std::cerr << "Error loading Text.ttf" << std::endl;
 	}
 	if (!font1.loadFromFile("resource/Texturina.ttf"))
+	{
+		std::cerr << "Error loading Text.ttf" << std::endl;
+	}
+	if (!font2.loadFromFile("resource/Underline.ttf"))
 	{
 		std::cerr << "Error loading Text.ttf" << std::endl;
 	}
@@ -61,17 +65,39 @@ QuickSort::QuickSort(void) {
     text.setString("SORTING");
     text.setCharacterSize(45);
     text.setFillColor(Color::Red);
+
+    text5.setFont(font2);
+	text5.setString("Quick sort");
+	text5.setCharacterSize(18);
+	text5.setFillColor(Color::Red);
+
+	text6.setFont(font2);
+	text6.setString("Bubble Sort");
+	text6.setCharacterSize(18);
+	text6.setFillColor(Color::Red);
+
+	text7.setFont(font2);
+	text7.setString("00.00");
+	text7.setCharacterSize(18);
+	text7.setFillColor(Color::Red);
+
+	text8.setFont(font2);
+	text8.setString("00.00");
+	text8.setCharacterSize(18);
+	text8.setFillColor(Color::Red);
 }
 
 void QuickSort::reset() {
 	for (size_t i = 0; i < arr.size(); i++) {
-		arr[i] = (i+1) * (600/ arr.size());
+		arr[i] = (i+1) * (540/ arr.size());
 	}
 
 	for (size_t j = 0; j < arr1.size(); j++) {
-		arr1[j] = (j+1) * (600/ arr1.size());
+		arr1[j] = (j+1) * (540/ arr1.size());
 	}
 	//arr = {0};
+	text7.setString("00.00");
+	text8.setString("00.00");
 	partitionIndexes = {0};
 	partitionIndexes1 = {0};
 }
@@ -79,7 +105,7 @@ void QuickSort::reset() {
 void QuickSort::fillArrayRandom() {
 	//Generate increasing array
 	for (size_t i = 0; i < arr.size(); i++) {
-		arr[i] = (i+1) * (600/ arr.size());
+		arr[i] = (i+1) * (540/ arr.size());
 	}
 
 	//Shuffle array
@@ -89,7 +115,7 @@ void QuickSort::fillArrayRandom() {
 
 void QuickSort::fillArrayDescending() {
 	for (size_t i = arr.size(); i >0; i--) {
-		arr[arr.size()-i] = i * (600/ arr.size());
+		arr[arr.size()-i] = i * (540/ arr.size());
 	}
 }
 
@@ -116,6 +142,7 @@ void QuickSort::fillArrayAlmostSorted() {
 }
 
 void QuickSort::sortArray(std::array<int, ARR_MAX_VALUE>* arr, int low, int high) {
+	Clock clock1;
 	if (low < high)
 	{
 		int pi = partition(arr, low, high);
@@ -128,6 +155,9 @@ void QuickSort::sortArray(std::array<int, ARR_MAX_VALUE>* arr, int low, int high
 		// preIndexSort.get();
 		// postIndexSort.get();
 	}
+	Time t1 = clock1.getElapsedTime();
+	//float f1 = roundf(t1.asSeconds() * 100) / 100;		//2 digits after decimals
+	text7.setString(std::to_string(t1.asSeconds()));
 }
 
 int QuickSort::partition(std::array<int, ARR_MAX_VALUE>* ptArr, int low, int high) {
@@ -153,7 +183,7 @@ int QuickSort::partition(std::array<int, ARR_MAX_VALUE>* ptArr, int low, int hig
 void QuickSort::bubbleSort(std::array<int, ARR_MAX_VALUE>* pArr)
 {
 	//int n = ARR_MAX_VALUE;
-
+	Clock clock2;
 	std::array<int, ARR_MAX_VALUE> arr1 = *pArr;
 	for (int i = 0; i < ARR_MAX_VALUE - 1; i++){			//for no of passes
 		int count = 0;
@@ -169,6 +199,9 @@ void QuickSort::bubbleSort(std::array<int, ARR_MAX_VALUE>* pArr)
 		if (count == 0)
 			break;
 	}
+	Time t2 = clock2.getElapsedTime();
+	//float f2 = roundf(t2.asSeconds() * 100) / 100;		//2 digits after decimals
+	text8.setString(std::to_string(t2.asSeconds()));
 }
 
 void QuickSort::swap(int* a, int* b) {
@@ -181,6 +214,7 @@ void QuickSort::swap(int* a, int* b) {
 int QuickSort::Run(RenderWindow &App) {
 	Thread threadQ(std::bind(&QuickSort::sortArray,this,&arr,0,int(arr.size()-1)));
 	Thread threadB(std::bind(&QuickSort::bubbleSort,this,&arr1));
+	//View view(Vector2f(0.0f,0.0f),Vector2f(800.0f,600.0f));
 	Texture Texture;
     Sprite Sprite;
     if (!Texture.loadFromFile("resource/red1.png"))
@@ -196,6 +230,8 @@ int QuickSort::Run(RenderWindow &App) {
 		{
 			if (event.type == sf::Event::Closed)
 			{
+				threadB.terminate();
+				threadQ.terminate();
 				return (-1);
 			}
 			if (event.type == sf::Event::KeyPressed)
@@ -251,6 +287,8 @@ int QuickSort::Run(RenderWindow &App) {
 					//sortArray(&arr, 0, int(arr.size() - 1));
 				}
 				else if(X>302 && X<498 && Y>175 && Y<210){
+					threadB.terminate();
+					threadQ.terminate();
 					threadB.launch();
 					threadQ.launch();
 				}
@@ -261,6 +299,7 @@ int QuickSort::Run(RenderWindow &App) {
 		}
 
 		App.clear(Color::Black);
+		//App.setView(view);
 		App.draw(Sprite);
 
 		buttonRandom.setPosition(302,70);
@@ -276,11 +315,19 @@ int QuickSort::Run(RenderWindow &App) {
 		text2.setPosition(310,108);
 		text3.setPosition(304,143);
 		text4.setPosition(355,178);
+		text5.setPosition(10,10);
+		text6.setPosition(650,10);
+		text7.setPosition(190,10);
+		text8.setPosition(510,10);
 		App.draw(text);
 		App.draw(text1);
 		App.draw(text2);
 		App.draw(text3);
 		App.draw(text4);
+		App.draw(text5);
+		App.draw(text6);
+		App.draw(text7);
+		App.draw(text8);
 
 		float recXsize = ((App.getSize().x)-500)/ arr.size();
 	
@@ -298,16 +345,16 @@ int QuickSort::Run(RenderWindow &App) {
 
 		for (size_t i = 0; i < partitionIndexes.size(); i++){
 			if(partitionIndexes[i] == 1){
-				rectPointer.setSize(sf::Vector2f(recXsize, App.getSize().y));
-				rectPointer.setPosition(recXsize*i + recXsize, 0);
+				rectPointer.setSize(sf::Vector2f(recXsize, 540));
+				rectPointer.setPosition(recXsize*i + recXsize, 60);
 				App.draw(rectPointer);
 			}
 		}
 
 		for (size_t i = 0; i < partitionIndexes1.size(); i++){
 			if(partitionIndexes1[i] == 1){
-				rectPointer.setSize(sf::Vector2f(recXsize, App.getSize().y));
-				rectPointer.setPosition(recXsize*i + 500 + recXsize, 0);
+				rectPointer.setSize(sf::Vector2f(recXsize, 540));
+				rectPointer.setPosition(recXsize*i + 500 + recXsize, 60);
 				App.draw(rectPointer);
 			}
 		}
