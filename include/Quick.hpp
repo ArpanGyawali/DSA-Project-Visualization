@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include<SFML/Window.hpp>
 #include <array>
 #include <functional>
@@ -11,13 +12,13 @@
 #include <math.h>
 #include "cScreen.hpp"
 
-#define ARR_MAX_VALUE 60
-#define CHUNK_ARRAY_SIZE 10
+#define ARR_MAX_VALUE 30
+#define CHUNK_ARRAY_SIZE 5
 
 using namespace std;
 using namespace sf;
 
-class QuickSort : public cScreen
+class SortBattle : public cScreen
 {
 private:
 	std::array<int, ARR_MAX_VALUE> arr;
@@ -45,9 +46,9 @@ private:
 	Text text8;
 
 public:
-	QuickSort(void);
-	void sortArray(std::array<int, ARR_MAX_VALUE>* arr, int low, int high);
-	void bubbleSort(std::array<int, ARR_MAX_VALUE>* arr1);
+	SortBattle(void);
+	void QuickSort(std::array<int, ARR_MAX_VALUE>* arr, int low, int high);
+	void bubbleSort(std::array<int, ARR_MAX_VALUE> *arr1);
 	void fillArrayRandom();
 	void fillArrayDescending();
 	void fillArrayAlmostSorted();

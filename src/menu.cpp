@@ -6,21 +6,6 @@ menu::menu(void)
 	alpha_div = 3;
 	playing = false;
 	selectedItemIndex = 0;
-	if (!m1.openFromFile("resource/AmongUs.wav"))
-	{
-		std::cerr << "Error loading start.wav" << std::endl;
-	}
-	m1.setLoop(true);
-	m1.setVolume(50);
-	// if (!sb1.loadFromFile("resource/Mono.ttf"))
-	// {
-	// 	std::cerr << "Error loading HeadText.ttf" << std::endl;
-	// }
-	// s1.setBuffer(sb1);
-	// if (!sb2.loadFromFile("resource/.ttf"))
-	// {
-	// 	std::cerr << "Error loading HeadText.ttf" << std::endl;
-	// }
 }
 
 int menu::getPressedItem()
@@ -28,7 +13,7 @@ int menu::getPressedItem()
 	return selectedItemIndex;
 }
 
-int menu::Run(sf::RenderWindow &App)
+int menu::Run(sf::RenderWindow& App)
 {
 	Event event;
 	Texture Texture;
@@ -39,6 +24,23 @@ int menu::Run(sf::RenderWindow &App)
 	Font font1;
 	Text Menu[MAX_Number_OF_TEXT];
 	Text head;
+	SoundBuffer buffer1,buffer2;
+	
+
+	if (!buffer1.loadFromFile("resource/GUI_Select_29_1.wav")) {
+		std::cout << "Error!" << std::endl;
+	}
+
+	if (!buffer2.loadFromFile("resource/GUI_Select_01_1.wav")) {
+		std::cout << "Error!" << std::endl;
+	}
+
+	Sound sound1,sound2;
+	sound1.setBuffer(buffer1);
+	sound2.setBuffer(buffer2);
+
+
+	
 
 	// int menu = 0;
 	if (!font1.loadFromFile("resource/Mono.ttf"))
@@ -64,7 +66,7 @@ int menu::Run(sf::RenderWindow &App)
 
 	for (int i = 0; i < MAX_Number_OF_TEXT; i++) {
 		Menu[i].setFont(font);
-		Menu[i].setPosition(Vector2f(800-220 ,400+(i*50)));
+		Menu[i].setPosition(Vector2f(800 - 240, 400 + (i * 50)));
 		Menu[i].setCharacterSize(30);
 	}
 
@@ -72,13 +74,13 @@ int menu::Run(sf::RenderWindow &App)
 		Menu[0].setFillColor(Color::Red);
 	else
 		Menu[0].setFillColor(Color::White);
-	Menu[0].setString("SORTING VIZ");
+	Menu[0].setString("SORT BATTLE");
 
 	if (getPressedItem() == 1)
 		Menu[1].setFillColor(Color::Red);
 	else
 		Menu[1].setFillColor(Color::White);
-	Menu[1].setString("DIJKSTRA");
+	Menu[1].setString("MAZE SOLVER");
 
 
 	if (getPressedItem() == 2)
@@ -90,31 +92,29 @@ int menu::Run(sf::RenderWindow &App)
 	Menu[3].setFillColor(Color::White);
 	Menu[3].setString("EXIT");
 
-	m1.play();
-
 	if (playing)
 	{
 		alpha = alpha_max;
 	}
 
+	
 	while (Running)
 	{
 		//Verifying events
-		//m1.play();
 		while (App.pollEvent(event))
 		{
 			// Window closed
-			
 			if (event.type == Event::Closed)
 			{
 				return (-1);
 			}
-			//Key pressed
+			//For keyboard events
 			if (event.type == Event::KeyPressed)
 			{
 				switch (event.key.code)
 				{
 				case Keyboard::Up:
+					sound1.play();
 					if (selectedItemIndex - 1 >= 0) {
 						Menu[selectedItemIndex].setFillColor(Color::White);
 						selectedItemIndex--;
@@ -122,41 +122,44 @@ int menu::Run(sf::RenderWindow &App)
 					}
 					break;
 				case Keyboard::Down:
+					sound1.play();
 					if (selectedItemIndex + 1 < MAX_Number_OF_TEXT) {
+						
 						Menu[selectedItemIndex].setFillColor(Color::White);
-						selectedItemIndex++ ;
+						selectedItemIndex++;
 						Menu[selectedItemIndex].setFillColor(Color::Red);
 					}
 					break;
 				case Keyboard::Return:
-					m1.pause();
+					
 					switch (getPressedItem())
-                    {
-                    case 0:
-                    	playing = true;
-                        return (1);
-                        break;
-                    case 1:
-                    	playing = true;
-                        return (2);
-                        break;
-                    case 2:
-                    	playing = true;
-                        return (3);
-                        break;
-                    case 3:
-                        return (-1);
-                        break;
-                    default:
-                        break;
-                    }
+					{
+						
+					case 0:
+						playing = true;
+						return (1);
+						break;
+					case 1:
+						playing = true;
+						return (2);
+						break;
+					case 2:
+						playing = true;
+						return (3);
+						break;
+					case 3:
+						return (-1);
+						break;
+					default:
+						break;
+					}
 				default:
 					break;
 				}
 			}
 		}
 
-		if (alpha<alpha_max)
+		if (alpha < alpha_max)
 		{
 			alpha++;
 		}
@@ -164,9 +167,9 @@ int menu::Run(sf::RenderWindow &App)
 
 		App.clear();
 		App.draw(Sprite);
-		head.setPosition(50,40);
+		head.setPosition(50, 40);
 
-		if (alpha == alpha_max){
+		if (alpha == alpha_max) {
 			for (int i = 0; i < MAX_Number_OF_TEXT; i++) {
 				App.draw(Menu[i]);
 			}

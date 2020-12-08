@@ -2,6 +2,7 @@
 
 #include<SFML/Graphics.hpp>
 #include<SFML/Window.hpp>
+#include<SFML/Audio.hpp>
 #include<iostream>
 #include<functional>
 #include<math.h>    
@@ -10,8 +11,8 @@
 #include<string>
 #include "cScreen.hpp"
 
-#define NUM_ROW 30      //number of row
-#define NUM_COLS 40		//number of col
+#define NUM_ROW 30    
+#define NUM_COLS 40		
 
 using namespace std;
 using namespace sf;
@@ -19,13 +20,11 @@ using namespace sf;
 class Djks : public cScreen
 {
 private:
-	// bool sptSet[NUM_CELL][NUM_CELL];
-	// vector<pair<int,int> > pathD;
-	int filled[NUM_ROW][NUM_COLS];       //whether cell is colored
-    int grid[NUM_ROW][NUM_COLS];       //map with obstacle
+	int coloured[NUM_ROW][NUM_COLS];     
+    int obstacle[NUM_ROW][NUM_COLS];      
     pair<int,int> previous[NUM_ROW][NUM_COLS];
     float dist[NUM_ROW][NUM_COLS];
-    int source_x, source_y, dest_x, dest_y;
+    int src_x, src_y, dest_x, dest_y;
     int min_x, min_y;
     int shortest_distance = 0;
 	Font font1;
@@ -35,18 +34,18 @@ private:
 	Text text;
 	Text text3;
 	RectangleShape buttonReset;
-	RectangleShape buttonStartD;
+	RectangleShape buttonLaunch;
 	RectangleShape rectangle;
-	RectangleShape brectangle;
-	RectangleShape grectangle;
-	RectangleShape blueRectangle;
-	RectangleShape rrectangle;
-	RectangleShape yrectangle;
+	RectangleShape obsRectangle;
+	RectangleShape pathRectangle;
+	RectangleShape srcRectangle;
+	RectangleShape destRectangle;
+	RectangleShape findRectangle;
 public:
 	Djks(void);
 	void reset();
-	void findmin(float dist[NUM_ROW][NUM_COLS],int& min_x,int& min_y);
-	void findpath(pair<int,int> previous[NUM_ROW][NUM_COLS],float dist[NUM_ROW][NUM_COLS],int dest_x,int dest_y,int source_x,int source_y);
-	void dijkstra(int source_x,int source_y,int dest_x,int dest_y,int grid[NUM_ROW][NUM_COLS]);
+	void findMinimum(float dist[NUM_ROW][NUM_COLS],int& min_x,int& min_y);
+	void pathFinder(pair<int,int> previous[NUM_ROW][NUM_COLS],float dist[NUM_ROW][NUM_COLS],int dest_x,int dest_y,int src_x,int src_y);
+	void dijkstra(int src_x,int src_y,int dest_x,int dest_y,int obstacle[NUM_ROW][NUM_COLS]);
 	virtual int Run(RenderWindow &App);
 };

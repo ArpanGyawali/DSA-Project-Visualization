@@ -30,7 +30,7 @@ int Credits::Run(sf::RenderWindow &App)
   }
   Sprite.setTexture(Texture);
 
-	 while (Running) {
+   while (Running) {
     while (App.pollEvent(eVent)) {
       if (eVent.type == sf::Event::Closed) {
         return (-1);
