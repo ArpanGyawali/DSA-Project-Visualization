@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"setO",
+				"setOutlineColor"
+			],
+			[
+				"se",
+				"setOutlineThickness"
+			],
+			[
+				"arr",
+				"arr1"
+			],
+			[
+				"Qui",
+				"QuickSort"
+			],
+			[
+				"rect",
+				"rectPointer"
+			],
+			[
+				"as",
+				"asSeconds"
+			],
+			[
+				"sets",
+				"setString"
+			],
+			[
+				"TEXT",
+				"text4"
+			],
+			[
+				"bUTTO",
+				"buttonReset"
+			],
+			[
+				"BUTT",
+				"buttonStartD"
+			],
+			[
+				"font",
+				"font1"
+			],
+			[
+				"so",
+				"source_x"
+			],
+			[
+				"short",
+				"shortest_distance"
+			],
+			[
+				"path",
+				"pathD"
+			],
+			[
+				"set",
+				"setString"
+			],
+			[
+				"shor",
+				"shortest_distance"
+			],
+			[
+				"text",
+				"text3"
+			],
+			[
+				"te",
+				"text2"
+			],
+			[
+				"tex",
+				"text"
+			],
+			[
+				"butto",
+				"buttonReset"
+			],
+			[
+				"setC",
+				"setCharacterSize"
+			],
+			[
+				"setS",
+				"setString"
+			],
+			[
+				"des",
+				"dest_y"
+			],
+			[
+				"A",
+				"ARR_MAX_VALUE"
+			],
+			[
+				"suff",
+				"shuffleArray"
+			],
+			[
+				"size",
+				"size_t"
+			],
+			[
+				"butt",
+				"buttonSort"
+			],
+			[
+				"R",
+				"RectangleShape"
+			],
+			[
+				"TEX",
+				"text3"
+			],
+			[
+				"SE",
+				"setPosition"
+			],
+			[
+				"rec",
+				"rectPointer"
+			],
+			[
+				"re",
+				"rectangle"
+			],
+			[
+				"de",
+				"dest_x"
+			],
+			[
+				"su",
+				"source_x"
+			],
+			[
+				"min",
+				"min_y"
+			],
+			[
+				"sour",
+				"source_y"
+			],
+			[
+				"D",
+				"Dijkstra"
+			],
+			[
+				"sou",
+				"source_x"
+			],
+			[
+				"sho",
+				"shortest_distance"
+			],
+			[
+				"crea",
+				"createCredit"
+			],
+			[
+				"fact",
+				"factorialTail"
+			],
+			[
+				"usi",
+				"unsigned"
+			],
+			[
+				"fa",
+				"factorialTail"
+			],
+			[
+				"no",
+				"no_of_disc"
+			],
+			[
+				"max",
+				"maxHeaplify"
+			],
+			[
+				"m",
+				"min_index"
+			],
+			[
+				"X",
+				"XMat"
+			],
+			[
+				"Y",
+				"YMat"
+			],
+			[
+				"print",
+				"printMat"
+			],
+			[
+				"l",
+				"lowerMat"
+			],
+			[
+				"prin",
+				"printMat"
+			],
+			[
+				"pr",
+				"printMat"
+			],
+			[
+				"s",
+				"summation1"
+			],
+			[
+				"U",
+				"upperMat"
+			],
+			[
+				"n",
+				"newNode"
+			],
+			[
+				"new",
+				"newNode"
+			],
+			[
+				"pre",
+				"previous"
+			],
+			[
+				"in",
+				"inverseMat"
+			],
+			[
+				"unkno",
+				"unknownMat"
+			],
+			[
+				"unk",
+				"unknownMat"
+			],
+			[
+				"aug",
+				"augMat"
+			],
+			[
+				"ios",
+				"iostream\tstandard header"
+			],
+			[
+				"temp",
+				"temp"
+			],
+			[
+				"pol",
+				"poly2"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"coeffi",
+				"coefficient"
+			],
+			[
+				"poly",
+				"poly1"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"ne",
+				"next"
+			],
+			[
+				"e",
+				"exponent"
+			],
+			[
+				"po",
+				"PolynomialAddition"
+			],
+			[
+				"deleteA",
+				"deleteAtBeginning"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"is",
+				"isempty"
+			],
+			[
+				"ins",
+				"insertAfter"
+			],
+			[
+				"dele",
+				"deleteBefore"
+			],
+			[
+				"insert",
+				"insertBefore"
+			],
+			[
+				"insertB",
+				"insertBefore"
+			],
+			[
+				"inser",
+				"insertAtBeginning"
+			],
+			[
+				"c",
+				"CreateNode"
+			],
+			[
+				"del",
+				"delNode"
+			],
+			[
+				"node",
+				"nodePtr"
+			],
+			[
+				"delete",
+				"deleteFront"
+			],
+			[
+				"rea",
+				"rear"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"rever",
+				"reverseString"
+			],
+			[
+				"rev",
+				"revStr"
+			],
+			[
+				"infi",
+				"infixToPostfix"
+			],
+			[
+				"top",
+				"top_item"
+			],
+			[
+				"ro",
+				"rootCalculation"
+			],
+			[
+				"Er",
+				"ERROR"
+			],
+			[
+				"or",
+				"order"
+			],
+			[
+				"cop",
+				"copyText"
+			],
+			[
+				"fon",
+				"font\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"le",
+				"letter-spacing\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"lis",
+				"listLength"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"cr",
+				"createListElement"
+			],
+			[
+				"char",
+				"charSwap"
+			],
+			[
+				"swa",
+				"swapargs"
+			],
+			[
+				"int",
+				"intSwap"
+			],
+			[
+				"cha",
+				"charSwap"
+			],
+			[
+				"doub",
+				"doubleSwap"
+			],
+			[
+				"swap",
+				"swapping"
+			],
+			[
+				"t",
+				"tp\ttemplate <typename ${1:_InputIter}>"
+			],
+			[
+				"age",
+				"ageTemp"
+			],
+			[
+				"y",
+				"your"
+			],
+			[
+				"dat",
+				"dateOfBirth"
+			],
+			[
+				"i",
+				"input2"
+			],
+			[
+				"inpu",
+				"input2"
+			],
+			[
+				"conc",
+				"concatTwoString"
+			],
+			[
+				"cal",
+				"calStringLength"
+			],
+			[
+				"input",
+				"input1"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sr",
+				"script"
+			],
+			[
+				"ask",
+				"askUsername"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"us",
+				"userInfo"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"ase",
+				"asne\tassertNotEquals"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"grid",
+				"grid-template-columns\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/DSA-Project-Visualization.sublime-project",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/menu.cpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/DSA-Project-Visualization.sublime-project",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/main.cpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/Dijkstra.cpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/credits.cpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/include/Quick.hpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/include/menu.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/menu.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/credits.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/menu.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/main.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/Dijkstra.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/Quick.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/Quick.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/Dijkstra.hpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/include/Dijkstra.hpp",
+		"/C/Users/Jenisha/Desktop/Sort/src/main.cpp",
+		"/C/Users/Jenisha/Desktop/DSA-Project-Visualization/src/Quick.cpp",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/main.cpp",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/Menu.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/sound.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/sound.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/music.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/music.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/music.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/credits.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/screens.hpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/background.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/include/background.hpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_4/PolynomialAddition.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/FactorizationMethod.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/Secant.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_3/linked_list.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_4/QueueAsLL.cpp",
+		"/C/Users/Jenisha/Desktop/djs/src/main.cpp",
+		"/C/Users/Jenisha/Desktop/practise/src/screen_1.cpp",
+		"/C/Users/Jenisha/Desktop/DSA_Project/src/DSA_Project.sublime-project",
+		"/C/Users/Jenisha/Desktop/practise/include/cScreen.hpp",
+		"/C/Users/Jenisha/Desktop/practise/practise.sublime-project",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/src/background.cpp",
+		"/C/Users/Jenisha/Desktop/Try/Try.sublime-project",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/src/main.cpp",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/src/sound.cpp",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/include/sound.hpp",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/sound.cpp",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/sound.h",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/Menu.h",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/src/Sorting Animation.sublime-project",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_7/BubbleSort.cpp",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/src/sort.cpp",
+		"/C/Users/Jenisha/Desktop/management.cpp",
+		"/C/Users/Jenisha/Desktop/dikstra/src/dikstra.sublime-project",
+		"/C/Users/Jenisha/Desktop/DSA Project/Sorting Animation/Sorting Animation.sublime-project",
+		"/C/Users/Jenisha/Desktop/sublimeTextColor.tmTheme.xml",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_1/ques2.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_1/ques3.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/ques2.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/ques3.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_3/staticList.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN4_towerOfHanoi.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_5/DoublyLL.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/ques1.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_1/ques4.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_1/ques1.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/ques2.exe",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_4/StackAsLL.cpp",
+		"/C/Users/Jenisha/Downloads/qN1_factorial.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN2_fibonacci.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN3a_factorialTail.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN3b_fibonacciTail.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN3b_fibonacciTree.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_6/qN3a_factorialTree.cpp",
+		"/C/Users/Jenisha/Downloads/BubbleSort.cpp",
+		"/C/Users/Jenisha/Downloads/selectionSort.cpp",
+		"/C/Users/Jenisha/Downloads/insertionSort.cpp",
+		"/C/Users/Jenisha/Downloads/quickSort.cpp",
+		"/C/Users/Jenisha/Downloads/shellSort.cpp",
+		"/C/Users/Jenisha/Downloads/mergeSort.cpp",
+		"/C/Users/Jenisha/Downloads/heapSort.cpp",
+		"/C/Users/Jenisha/Downloads/aa.cpp",
+		"/C/Users/Jenisha/Downloads/LAB0501.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/bidhan.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussElimination.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussJordanInverse.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussInverse.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussElimination.exe",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_3/SinglyLL.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussJordan.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/GaussJordan.exe",
+		"/C/Users/Jenisha/Desktop/PACMAN/PAC-MAN/extraPickups.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/ques5.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/ques1.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/GaussJordan.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/staticList.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/SinglyLL.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/PolynomialAddition.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/QueueAsLL.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/StackAsLL.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/list.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/main.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/SinglyLL.h",
+		"/A/learning materials/Online classes/Assignments/DSA/towerOfHanoi.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/queueList.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/linked_list.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/linkedlist.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_2/singlyLL.cpp",
+		"/A/learning materials/Online classes/Assignments/NM/False_Position.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/ques2.cpp",
+		"/C/Users/Jenisha/Desktop/LAB0201.cpp",
+		"/C/Users/Jenisha/Desktop/Lab_2 1.docx",
+		"/A/learning materials/Online classes/Assignments/DSA/LAB_1/stack.h",
+		"/A/python projects/Regular Expression/phone no.py",
+		"/A/learning materials/Online classes/Assignments/NM/NewtonRapsonPolynomial.cpp",
+		"/A/learning materials/Online classes/Assignments/DSA/ques2.exe",
+		"/A/python projects/projects/nm_solver/nm_solver.py",
+		"/A/python projects/projects/nm_solver/nm_solver.bat",
+		"/C/Users/Jenisha/AppData/Roaming/Sublime Text 3/Packages/User/Python_run.sublime-build",
+		"/A/python projects/Basics/funtions.py",
+		"/C/Users/Jenisha/Desktop/bisection(075BCT014).cpp",
+		"/A/learning materials/Online classes/Assignments/NM/test.cpp",
+		"/F/[DesireCourse.Net] Udemy - The Complete Web Developer in 2020 Zero to Mastery/13. Advanced Javascript/2.1 advanced_exercise_1/exercise1.js",
+		"/A/Web developig projects/DOM/List Generator/script.js",
+		"/A/learning materials/Online classes/Assignments/DSA/ques6.cpp",
+		"/A/learning materials/Online classes/Slides/AM/SKM/ques6.cpp",
+		"/A/learning materials/Online classes/Slides/AM/SKM/ques5.cpp",
+		"/A/Web developig projects/DOM/style.css",
+		"/A/Web developig projects/DOM/script.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"buttonStartD",
+			"findpath",
+			"findmin",
+			"rrectangle",
+			"blueRectangle",
+			"yrectangle",
+			"findRectangle",
+			"grectangle",
+			"brectangle",
+			"source",
+			"source_x",
+			"distance",
+			"dist",
+			"grid",
+			"filled",
+			"sortArray",
+			"QuickSort",
+			"red1",
+			"source_y",
+			"NUM_CELL",
+			"num",
+			"setsize"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"buttonLaunch",
+			"pathFinder",
+			"findMinimum",
+			"destRectangle",
+			"srcRectangle",
+			"findRectangle",
+			"pathRectangle",
+			"findRectangle",
+			"obsRectangle",
+			"src",
+			"src_x",
+			"obstacle",
+			"distance",
+			"obstacle",
+			"coloured",
+			"QuickSort",
+			"SortBattle",
+			"NUM_COLS",
+			"NUM_ROW",
+			"NUM_COLS",
+			"NUM_ROW",
+			"NUM_CELL",
+			"setSize"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 97.0
+	},
+	"pinned_build_system": "C++ Build Debug",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 134.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
